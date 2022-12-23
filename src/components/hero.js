@@ -28,14 +28,14 @@ function Hero() {
                     <section>
                             <h1 id="herotitel">Boek nu je taxi</h1>
                             <span><Image src={phoneIco} alt="Telefoon icoontje"/><h2>06 12 34 56 78</h2></span>
-                            <Link href="/afspraak"><span id="herobtn">Afspraak</span> <Image src={arrowIco} alt="Pijl icoontje"/></Link>
+                            <Link href="/afspraak" data-aos="fade-right"><span id="herobtn">Afspraak</span> <Image src={arrowIco} alt="Pijl icoontje"/></Link>
                     </section>
                 </div>
             </div>
             <div>
                 <div>
                     <section>
-                        <Image src={Vito} alt="Mercedes Benz Vito Taxi" data-aos="fade-right"/>
+                        <Image src={Vito} alt="Mercedes Benz Vito Taxi"/>
                     </section>
                     <section>
                         <div>

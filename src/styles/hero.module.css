@@ -31,16 +31,25 @@
 .hero > div:nth-of-type(1) > div section span{
     display: flex;
     justify-content: center;
+    position: relative;
+    width: fit-content;
+    margin: auto;
 }
 
 .hero > div:nth-of-type(1) > div section span img{
-    width: 30px;
+    width: 25px;
     height: auto;
-    margin-right: 10px;
+    position: absolute;
+    left: -35px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
 }
 
 .hero > div:nth-of-type(1) > div section span h2{
     font-size: 2.5em;
+    background: none;
+    color: #ffff;
 }
 
 .hero > div:nth-of-type(1) > div section a{
@@ -77,7 +86,6 @@
     right: 20px;
 }
 
-
 .hero > div:nth-of-type(2) > div{
     max-width: 1200px;
     margin: 0 auto;
@@ -97,10 +105,13 @@
 .hero > div:nth-of-type(2) > div section:nth-of-type(2){
     padding: 1rem 2rem;
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 25px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 1100px;
     color: #ffff;
     border-top: 2px;
     border-bottom: 2px; 
@@ -109,8 +120,6 @@
       linear-gradient(
         to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C
       ) 100% 0 100% 0;
-
-
 }
 
 .hero > div:nth-of-type(2) > div section:nth-of-type(2) h3{
@@ -123,4 +132,106 @@
     display: block;
     margin: auto;
     margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1215px) {
+    .hero > div:nth-of-type(1) > div,.hero > div:nth-of-type(2) > div{
+        padding: 0 15px;
+    }   
+    .hero > div:nth-of-type(2) > div section:nth-of-type(2){
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .hero > div:nth-of-type(2) > div section:nth-of-type(1) img{
+        width: 500px;
+        top: -200px
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .hero > div:nth-of-type(1) > div section span h2{
+        font-size: 2.2em;
+    }
+    
+    .hero > div:nth-of-type(1) > div section a{
+        width: 200px;
+        padding: 10px 0;
+        font-size: 1.3em;
+        margin: 30px auto;
+    }
+
+    .hero > div:nth-of-type(1) > div section a img{
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero > div:nth-of-type(2) > div section:nth-of-type(1) img{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .hero > div:nth-of-type(1) > div section{
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    .hero > div:nth-of-type(2) > div section:nth-of-type(1) img{
+        width: 70%;
+        top: -65px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .hero > div:nth-of-type(2) > div{
+        height: 400px;
+    }
+
+    .hero > div:nth-of-type(2) > div section:nth-of-type(2) img{
+        width: 20px;
+    }
+
+    .hero > div:nth-of-type(2) > div section:nth-of-type(2) h3{
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hero > div:nth-of-type(2) > div section:nth-of-type(1) img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero> div:nth-of-type(1) > div section h1{
+        font-size: 0.8em;
+    }
+
+    .hero > div:nth-of-type(1) > div section span h2{
+        font-size: 1.8em;
+    }
+
+    .hero > div:nth-of-type(1) > div section span img{
+        width: 20px;
+        left: -30px;
+    }
+
+    .hero > div:nth-of-type(1) > div section a img{
+        right: 10px;
+    }
+
+    .hero > div:nth-of-type(2) > div section:nth-of-type(2){
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+        bottom: 0;
+    }
 }

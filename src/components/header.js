@@ -6,6 +6,8 @@ import styles from "../styles/header.module.css";
 import Logo from "../assets/Logo.svg";
 import MailIco from "../assets/icons/mail.svg";
 import PhoneIco from "../assets/icons/phone.svg";
+import hamburgerIco from "../assets/icons/hamburger.svg";
+import closeIco from "../assets/icons/close.svg";
 import WhatsAppIco from "../assets/icons/whatsapp.svg";
 import UKFlag from "../assets/ukflag.svg";
 import NLFlag from "../assets/nlflag.svg";
@@ -17,7 +19,7 @@ function Header() {
             let flagBtn = document.querySelector("#flagBtn");
         });
 
-        function sayhello(){
+        function toggleLanguage(){
 
             if (flagBtn.classList.contains("en")){
                 flagBtn.classList.remove("en")
@@ -37,14 +39,24 @@ function Header() {
             Translate();
         }
 
+        function openHamburgerMenu(){
+            document.querySelector(".hamburgermenu").classList.remove("removehamburger");
+            document.querySelector(".hamburgermenu").classList.add("openhamburger");
+        }
+
+        function closeHamburgerMenu(){
+            document.querySelector(".hamburgermenu").classList.remove("openhamburger");
+            document.querySelector(".hamburgermenu").classList.add("removehamburger");
+        }
+
 
     return(      
         <header className={styles.header}>  
             <div>
                 <div>
-                    <Image src={Logo} alt="Logo van Taxi T.C."/>
+                    <Link href="/"><Image src={Logo} alt="Logo van Taxi T.C."/></Link>
                     <section>
-                        <Link href="#"><span><Image src={MailIco} alt="Mail icoontje"/>taxitc@gmail.com</span></Link>
+                        <Link href="#"><span><Image src={MailIco} alt="Mail icoontje"/>taxi-tc@hotmail.com</span></Link>
                         <Link href="#"><span><Image src={PhoneIco} alt="Telefoon icoontje"/>061234567</span></Link>
                         <Link href="#"><span><Image src={WhatsAppIco} alt="WhatsApp icoontje"/>WhatsApp</span></Link>
                     </section>
@@ -52,14 +64,18 @@ function Header() {
             </div>
             <div>
                 <nav>
-                    <ul>
-                        <li><Link href="/" id="nav1">Home</Link></li>
-                        <li><Link href="/prijzen" id="nav2">Prijzen</Link></li>
-                        <li><Link href="/overons" id="nav3">Over ons</Link></li>
-                        <li><Link href="/rijgebieden" id="nav4">Rij gebieden</Link></li>
-                        <li><Link href="/afspraak" id="nav5">Afspraak</Link></li>
-                        <li><button onClick={sayhello} id="flagBtn" className="nl"><Image id="ukflag" src={UKFlag} alt="UK Vlag"/><Image id="nlflag" src={NLFlag} alt="UK Vlag"/></button></li>
-                    </ul>
+                    <button onClick={openHamburgerMenu} id="hamburgerbtn"><Image src={hamburgerIco} alt="Hamburger menu icoon"/></button>
+                    <section className="hamburgermenu">
+                        <ul>
+                            <li><Link href="/" id="nav1" onClick={closeHamburgerMenu}>Home</Link></li>
+                            <li><Link href="/prijzen" id="nav2" onClick={closeHamburgerMenu}>Prijzen</Link></li>
+                            <li><Link href="/overons" id="nav3" onClick={closeHamburgerMenu}>Over ons</Link></li>
+                            <li><Link href="/rijgebieden" id="nav4" onClick={closeHamburgerMenu}>Rij gebieden</Link></li>
+                            <li><Link href="/afspraak" id="nav5" onClick={closeHamburgerMenu}>Afspraak</Link></li>
+                        </ul>
+                        <button onClick={closeHamburgerMenu} id="hamburgerclosebtn"><Image src={closeIco} alt="Kruis icoon"/></button>
+                    </section>
+                    <button onClick={toggleLanguage} id="flagBtn" className="nl"><Image id="ukflag" src={UKFlag} alt="UK Vlag"/><Image id="nlflag" src={NLFlag} alt="UK Vlag"/></button>
                 </nav>
             </div>
             <div></div>

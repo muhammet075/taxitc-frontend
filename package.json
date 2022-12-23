@@ -2,7 +2,7 @@
   "name": "taxitc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://donerkebap.be/",
+  "homepage": "https://taxitc.nl/",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
