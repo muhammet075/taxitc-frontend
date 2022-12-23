@@ -1,0 +1,101 @@
+.header{
+    background-color: #000;
+    margin-bottom: 25px;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header > div:nth-of-type(1) > div{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.header > div:nth-of-type(1) > div img{
+    background-color: white;
+    width: 200px;
+    height: auto;
+}
+
+.header > div:nth-of-type(1) > div section{
+    display: flex;
+    align-items: center;
+}
+
+.header > div:nth-of-type(1) > div section a{
+    display: block;
+    margin-left: 35px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.header > div:nth-of-type(1) > div section a span{
+    display: flex;
+    align-items: center;
+}
+
+.header > div:nth-of-type(1) > div section a span img{
+    width: 20px;
+    height: auto;
+    background: none;
+    margin-right: 5px;
+}
+
+
+.header > div:nth-of-type(2){
+    height: 35px;
+    background: linear-gradient(to right, #b17c0b, #ddc060, #ddc05f, #ddc060, #b17c0b);
+}
+
+.header > div:nth-of-type(2) > nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.header > div:nth-of-type(2) > nav ul{
+    width: 550px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none; 
+    align-items: center;
+}
+
+.header > div:nth-of-type(2) > nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+}
+
+.header > div:nth-of-type(2) > nav ul li:last-child{
+    position: absolute;
+    right: 0;
+}
+
+.header > div:nth-of-type(2) > nav ul li:last-child button{
+    background: none;
+    border: none;
+    cursor: pointer;
+} 
+
+.header > div:nth-of-type(2) > nav ul li:last-child button img{
+    height: 30px;
+    width: auto;
+}
+
+.header > div:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-image: url('/taxipaterndesktop.svg');
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

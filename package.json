@@ -2,16 +2,21 @@
   "name": "taxitc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://donerkebap.be/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@next/font": "13.0.7",
+    "aos": "^2.3.4",
+    "local-storage": "^2.0.0",
     "next": "13.0.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sessionstorage": "^0.1.0",
+    "sharp": "^0.31.3"
   }
 }
