@@ -100,8 +100,8 @@ export default function Foter() {
                             <li><Link href="plaats/assendelft">Taxi Assendelft</Link></li>
                             <li><Link href="plaats/wormerveer">Taxi Wormerveer</Link></li>
                             <li><Link href="plaats/oostzaan">Taxi Oostzaan</Link></li>
-                            <li><Link href="plaats/oostzaan">Taxi Beverwijk</Link></li>
-                            <li><Link href="plaats/oostzaan">Taxi Heemskerk</Link></li>
+                            <li><Link href="plaats/beverwijk">Taxi Beverwijk</Link></li>
+                            <li><Link href="plaats/heemskerk">Taxi Heemskerk</Link></li>
                         </ul>
                     </section>
 
