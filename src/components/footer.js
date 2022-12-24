@@ -86,22 +86,22 @@ export default function Foter() {
                         
                         <ul>
                             <li><h2 id="footertitel2">Rij gebieden</h2></li>
-                            <li><Link href="/amsterdam">Taxi Amsterdam</Link></li>
-                            <li><Link href="/amstelveen">Taxi Amstelveen</Link></li>
-                            <li><Link href="/zaandam">Taxi Zaandam</Link></li>
-                            <li><Link href="/diemen">Taxi Diemen</Link></li>
-                            <li><Link href="/hoofddorp">Taxi Hoofddorp</Link></li>
-                            <li><Link href="/haarlem">Taxi Haarlem</Link></li>
+                            <li><Link href="plaats/amsterdam">Taxi Amsterdam</Link></li>
+                            <li><Link href="plaats/amstelveen">Taxi Amstelveen</Link></li>
+                            <li><Link href="plaats/zaandam">Taxi Zaandam</Link></li>
+                            <li><Link href="plaats/diemen">Taxi Diemen</Link></li>
+                            <li><Link href="plaats/hoofddorp">Taxi Hoofddorp</Link></li>
+                            <li><Link href="plaats/haarlem">Taxi Haarlem</Link></li>
                         </ul>
 
                         <ul>
-                            <li><Link href="/haarlem">Taxi Zaandijk</Link></li>
-                            <li><Link href="/krommenie">Taxi Krommenie</Link></li>
-                            <li><Link href="/assendelft">Taxi Assendelft</Link></li>
-                            <li><Link href="/wormerveer">Taxi Wormerveer</Link></li>
-                            <li><Link href="/oostzaan">Taxi Oostzaan</Link></li>
-                            <li><Link href="/oostzaan">Taxi Beverwijk</Link></li>
-                            <li><Link href="/oostzaan">Taxi Heemskerk</Link></li>
+                            <li><Link href="plaats/haarlem">Taxi Zaandijk</Link></li>
+                            <li><Link href="plaats/krommenie">Taxi Krommenie</Link></li>
+                            <li><Link href="plaats/assendelft">Taxi Assendelft</Link></li>
+                            <li><Link href="plaats/wormerveer">Taxi Wormerveer</Link></li>
+                            <li><Link href="plaats/oostzaan">Taxi Oostzaan</Link></li>
+                            <li><Link href="plaats/oostzaan">Taxi Beverwijk</Link></li>
+                            <li><Link href="plaats/oostzaan">Taxi Heemskerk</Link></li>
                         </ul>
                     </section>
 
