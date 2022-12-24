@@ -25,79 +25,79 @@ export default function Rijgebieden() {
                 </section>
 
                 <div>
-                    <Link href="/amsterdam">
+                    <Link href="/plaats/amsterdam">
                         <section>
                             <h3>Amsterdam <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/amstelveen">
+                    <Link href="/plaats/amstelveen">
                         <section>
                             <h3>Amstelveen<Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/zaandam">
+                    <Link href="/plaats/zaandam">
                         <section>
                             <h3>Zaandam <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/diemen">
+                    <Link href="/plaats/diemen">
                         <section>
                             <h3>Diemen <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/hoofddorp">
+                    <Link href="/plaats/hoofddorp">
                         <section>
                             <h3>Hoofddorp <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/haarlem">
+                    <Link href="/plaats/haarlem">
                         <section>
                             <h3>Haarlem <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/zaandijk">
+                    <Link href="/plaats/zaandijk">
                         <section>
                             <h3>Zaandijk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/krommenie">
+                    <Link href="/plaats/krommenie">
                         <section>
                             <h3>Krommenie <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/assendelft">
+                    <Link href="/plaats/assendelft">
                         <section>
                             <h3>Assendelft <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/wormerveer">
+                    <Link href="/plaats/wormerveer">
                         <section>
                             <h3>Wormerveer <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/oostzaan">
+                    <Link href="/plaats/oostzaan">
                         <section>
                             <h3>Oostzaan <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/beverwijk">
+                    <Link href="/plaats/beverwijk">
                         <section>
                             <h3>Beverwijk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
 
-                    <Link href="/heemskerk">
+                    <Link href="/plaats/heemskerk">
                         <section>
                             <h3>Heemskerk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>

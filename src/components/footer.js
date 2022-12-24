@@ -7,7 +7,7 @@ import WhatsAppIco from "../assets/icons/whatsapp.svg";
 import mailIco from "../assets/icons/mail.svg";
 import phoneIco from "../assets/icons/phone.svg";
 import vito1 from "../assets/vitoecht.png";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/Logo.svg";
 
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -38,11 +38,9 @@ export default function Foter() {
                 autoplayDisableOnInteractio={false}
                 loop={true}
                 breakpoints={{
-                    // when window width is >= 640px
                     200: {
                       slidesPerView: 2,
                     },
-                    // when window width is >= 768px
                     890: {
                       slidesPerView: 3,
                     },

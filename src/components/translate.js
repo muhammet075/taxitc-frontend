@@ -44,7 +44,6 @@ export function Translate(){
             document.querySelector("#kmamountlabel").innerHTML = translations[0].nl[0].kmamountlabel;
         } catch(e){} 
 
-
         try{
             document.querySelector("#footertitel1").innerHTML = translations[0].nl[0].footertitel1;
             document.querySelector("#footertitel2").innerHTML = translations[0].nl[0].footertitel2;
@@ -55,8 +54,6 @@ export function Translate(){
             document.querySelector("#footerlink5").innerHTML = translations[0].nl[0].footerlink5;
             document.querySelector("#footercopyright").innerHTML = translations[0].nl[0].footercopyright;
         } catch(e){}
-
-
 
         try{
             document.querySelector("#prijstext").innerHTML = translations[0].nl[0].prijstext;
@@ -80,6 +77,83 @@ export function Translate(){
             document.querySelector("#afspraakcontent").innerHTML = translations[0].nl[0].afspraakcontent;    
         } catch(e){}
 
+        try{
+            document.querySelector("#amsterdam1").innerHTML = translations[0].nl[0].amsterdam1;
+            document.querySelector("#amsterdam2").innerHTML = translations[0].nl[0].amsterdam2;
+            document.querySelector("#amsterdam3").innerHTML = translations[0].nl[0].amsterdam3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#amstelveen1").innerHTML = translations[0].nl[0].amstelveen1;
+            document.querySelector("#amstelveen2").innerHTML = translations[0].nl[0].amstelveen2;
+            document.querySelector("#amstelveen3").innerHTML = translations[0].nl[0].amstelveen3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#zaandam1").innerHTML = translations[0].nl[0].zaandam1;
+            document.querySelector("#zaandam2").innerHTML = translations[0].nl[0].zaandam2;
+            document.querySelector("#zaandam3").innerHTML = translations[0].nl[0].zaandam3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#diemen1").innerHTML = translations[0].nl[0].diemen1;
+            document.querySelector("#diemen2").innerHTML = translations[0].nl[0].diemen2;
+            document.querySelector("#diemen3").innerHTML = translations[0].nl[0].diemen3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#hoofddorp1").innerHTML = translations[0].nl[0].hoofddorp1;
+            document.querySelector("#hoofddorp2").innerHTML = translations[0].nl[0].hoofddorp2;
+            document.querySelector("#hoofddorp3").innerHTML = translations[0].nl[0].hoofddorp3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#haarlem1").innerHTML = translations[0].nl[0].haarlem1;
+            document.querySelector("#haarlem2").innerHTML = translations[0].nl[0].haarlem2;
+            document.querySelector("#haarlem3").innerHTML = translations[0].nl[0].haarlem3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#zaandijk1").innerHTML = translations[0].nl[0].zaandijk1;
+            document.querySelector("#zaandijk2").innerHTML = translations[0].nl[0].zaandijk2;
+            document.querySelector("#zaandijk3").innerHTML = translations[0].nl[0].zaandijk3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#krommenie1").innerHTML = translations[0].nl[0].krommenie1;
+            document.querySelector("#krommenie2").innerHTML = translations[0].nl[0].krommenie2;
+            document.querySelector("#krommenie3").innerHTML = translations[0].nl[0].krommenie3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#assendelft1").innerHTML = translations[0].nl[0].assendelft1;
+            document.querySelector("#assendelft2").innerHTML = translations[0].nl[0].assendelft2;
+            document.querySelector("#assendelft3").innerHTML = translations[0].nl[0].assendelft3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#wormerveer1").innerHTML = translations[0].nl[0].wormerveer1;
+            document.querySelector("#wormerveer2").innerHTML = translations[0].nl[0].wormerveer2;
+            document.querySelector("#wormerveer3").innerHTML = translations[0].nl[0].wormerveer3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#oostzaan1").innerHTML = translations[0].nl[0].oostzaan1;
+            document.querySelector("#oostzaan2").innerHTML = translations[0].nl[0].oostzaan2;
+            document.querySelector("#oostzaan3").innerHTML = translations[0].nl[0].oostzaan3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#beverwijk1").innerHTML = translations[0].nl[0].beverwijk1;
+            document.querySelector("#beverwijk2").innerHTML = translations[0].nl[0].beverwijk2;
+            document.querySelector("#beverwijk3").innerHTML = translations[0].nl[0].beverwijk3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#heemskerk1").innerHTML = translations[0].nl[0].heemskerk1;
+            document.querySelector("#heemskerk2").innerHTML = translations[0].nl[0].heemskerk2;
+            document.querySelector("#heemskerk3").innerHTML = translations[0].nl[0].heemskerk3;
+        }catch(e){}
 
     } else if (language === "en") {
         console.log(translations[0].en[0].nav1);
@@ -125,7 +199,6 @@ export function Translate(){
             document.querySelector("#footerlink5").innerHTML = translations[0].en[0].footerlink5;
             document.querySelector("#footercopyright").innerHTML = translations[0].en[0].footercopyright;
         } catch(e){}
-        
 
         try{
             document.querySelector("#prijstext").innerHTML = translations[0].en[0].prijstext;
@@ -148,6 +221,84 @@ export function Translate(){
             document.querySelector("#afspraaktext").innerHTML = translations[0].en[0].afspraaktext;
             document.querySelector("#afspraakcontent").innerHTML = translations[0].en[0].afspraakcontent;    
         } catch(e){}
+
+        try{
+            document.querySelector("#amsterdam1").innerHTML = translations[0].en[0].amsterdam1;
+            document.querySelector("#amsterdam2").innerHTML = translations[0].en[0].amsterdam2;
+            document.querySelector("#amsterdam3").innerHTML = translations[0].en[0].amsterdam3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#amstelveen1").innerHTML = translations[0].en[0].amstelveen1;
+            document.querySelector("#amstelveen2").innerHTML = translations[0].en[0].amstelveen2;
+            document.querySelector("#amstelveen3").innerHTML = translations[0].en[0].amstelveen3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#zaandam1").innerHTML = translations[0].en[0].zaandam1;
+            document.querySelector("#zaandam2").innerHTML = translations[0].en[0].zaandam2;
+            document.querySelector("#zaandam3").innerHTML = translations[0].en[0].zaandam3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#diemen1").innerHTML = translations[0].en[0].diemen1;
+            document.querySelector("#diemen2").innerHTML = translations[0].en[0].diemen2;
+            document.querySelector("#diemen3").innerHTML = translations[0].en[0].diemen3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#hoofddorp1").innerHTML = translations[0].en[0].hoofddorp1;
+            document.querySelector("#hoofddorp2").innerHTML = translations[0].en[0].hoofddorp2;
+            document.querySelector("#hoofddorp3").innerHTML = translations[0].en[0].hoofddorp3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#haarlem1").innerHTML = translations[0].en[0].haarlem1;
+            document.querySelector("#haarlem2").innerHTML = translations[0].en[0].haarlem2;
+            document.querySelector("#haarlem3").innerHTML = translations[0].en[0].haarlem3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#zaandijk1").innerHTML = translations[0].en[0].zaandijk1;
+            document.querySelector("#zaandijk2").innerHTML = translations[0].en[0].zaandijk2;
+            document.querySelector("#zaandijk3").innerHTML = translations[0].en[0].zaandijk3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#krommenie1").innerHTML = translations[0].en[0].krommenie1;
+            document.querySelector("#krommenie2").innerHTML = translations[0].en[0].krommenie2;
+            document.querySelector("#krommenie3").innerHTML = translations[0].en[0].krommenie3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#assendelft1").innerHTML = translations[0].en[0].assendelft1;
+            document.querySelector("#assendelft2").innerHTML = translations[0].en[0].assendelft2;
+            document.querySelector("#assendelft3").innerHTML = translations[0].en[0].assendelft3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#wormerveer1").innerHTML = translations[0].en[0].wormerveer1;
+            document.querySelector("#wormerveer2").innerHTML = translations[0].en[0].wormerveer2;
+            document.querySelector("#wormerveer3").innerHTML = translations[0].en[0].wormerveer3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#oostzaan1").innerHTML = translations[0].en[0].oostzaan1;
+            document.querySelector("#oostzaan2").innerHTML = translations[0].en[0].oostzaan2;
+            document.querySelector("#oostzaan3").innerHTML = translations[0].en[0].oostzaan3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#beverwijk1").innerHTML = translations[0].en[0].beverwijk1;
+            document.querySelector("#beverwijk2").innerHTML = translations[0].en[0].beverwijk2;
+            document.querySelector("#beverwijk3").innerHTML = translations[0].en[0].beverwijk3;
+        }catch(e){}
+
+        try{
+            document.querySelector("#heemskerk1").innerHTML = translations[0].en[0].heemskerk1;
+            document.querySelector("#heemskerk2").innerHTML = translations[0].en[0].heemskerk2;
+            document.querySelector("#heemskerk3").innerHTML = translations[0].en[0].heemskerk3;
+        }catch(e){}
 
 
     }
