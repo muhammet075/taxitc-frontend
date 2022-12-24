@@ -45,7 +45,16 @@ export function Translate(){
         } catch(e){} 
 
 
-
+        try{
+            document.querySelector("#footertitel1").innerHTML = translations[0].nl[0].footertitel1;
+            document.querySelector("#footertitel2").innerHTML = translations[0].nl[0].footertitel2;
+            document.querySelector("#footerlink1").innerHTML = translations[0].nl[0].footerlink1;
+            document.querySelector("#footerlink2").innerHTML = translations[0].nl[0].footerlink2;
+            document.querySelector("#footerlink3").innerHTML = translations[0].nl[0].footerlink3;
+            document.querySelector("#footerlink4").innerHTML = translations[0].nl[0].footerlink4;
+            document.querySelector("#footerlink5").innerHTML = translations[0].nl[0].footerlink5;
+            document.querySelector("#footercopyright").innerHTML = translations[0].nl[0].footercopyright;
+        } catch(e){}
 
 
 
@@ -56,12 +65,14 @@ export function Translate(){
 
         try{
             document.querySelector("#overonstext").innerHTML = translations[0].nl[0].overonstext;
-            document.querySelector("#overonscontent").innerHTML = translations[0].nl[0].overonscontent;    
+            document.querySelector("#overonscontent1").innerHTML = translations[0].nl[0].overonscontent1;    
+            document.querySelector("#overonscontent2").innerHTML = translations[0].nl[0].overonscontent2;    
         } catch(e){}
 
         try{
             document.querySelector("#rijgebiedentext").innerHTML = translations[0].nl[0].rijgebiedentext;
-            document.querySelector("#rijgebiedencontent").innerHTML = translations[0].nl[0].rijgebiedencontent;    
+            document.querySelector("#rijgebiedencontent1").innerHTML = translations[0].nl[0].rijgebiedencontent1;   
+            document.querySelector("#rijgebiedencontent2").innerHTML = translations[0].nl[0].rijgebiedencontent2; 
         } catch(e){}
 
         try{
@@ -103,6 +114,17 @@ export function Translate(){
             document.querySelector("#calculatorbtn").innerHTML = translations[0].en[0].calculatorbtn;
             document.querySelector("#kmamountlabel").innerHTML = translations[0].en[0].kmamountlabel;
         } catch(e){} 
+
+        try{
+            document.querySelector("#footertitel1").innerHTML = translations[0].en[0].footertitel1;
+            document.querySelector("#footertitel2").innerHTML = translations[0].en[0].footertitel2;
+            document.querySelector("#footerlink1").innerHTML = translations[0].en[0].footerlink1;
+            document.querySelector("#footerlink2").innerHTML = translations[0].en[0].footerlink2;
+            document.querySelector("#footerlink3").innerHTML = translations[0].en[0].footerlink3;
+            document.querySelector("#footerlink4").innerHTML = translations[0].en[0].footerlink4;
+            document.querySelector("#footerlink5").innerHTML = translations[0].en[0].footerlink5;
+            document.querySelector("#footercopyright").innerHTML = translations[0].en[0].footercopyright;
+        } catch(e){}
         
 
         try{
@@ -112,12 +134,14 @@ export function Translate(){
 
         try{
             document.querySelector("#overonstext").innerHTML = translations[0].en[0].overonstext;
-            document.querySelector("#overonscontent").innerHTML = translations[0].en[0].overonscontent;    
+            document.querySelector("#overonscontent1").innerHTML = translations[0].en[0].overonscontent1;    
+            document.querySelector("#overonscontent2").innerHTML = translations[0].en[0].overonscontent2;    
         } catch(e){}
 
         try{
             document.querySelector("#rijgebiedentext").innerHTML = translations[0].en[0].rijgebiedentext;
-            document.querySelector("#rijgebiedencontent").innerHTML = translations[0].en[0].rijgebiedencontent;    
+            document.querySelector("#rijgebiedencontent1").innerHTML = translations[0].en[0].rijgebiedencontent1;    
+            document.querySelector("#rijgebiedencontent2").innerHTML = translations[0].en[0].rijgebiedencontent2;
         } catch(e){}
 
         try{

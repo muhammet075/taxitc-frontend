@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { Translate } from "../components/translate";
+import Image from "next/image";
 import Link from "next/link";
+import arrowIco from "../assets/icons/arrow.svg";
+import Head from "next/head";
 
 export default function Rijgebieden() {
 
@@ -9,97 +12,98 @@ export default function Rijgebieden() {
     }, []);
 
     return (
-        <div className="container">
-            <section>
-                <h1 id="rijgebiedentext">Rij gebieden</h1>
-                <p id="rijgebiedencontent1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-            </section>
+        <>
+        <Head>
+            <title>Taxi T.C. - Rij gebieden</title>
+        </Head>
 
-            <section>
-                <h2>Amsterdam</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/amsterdam" id="amsterdambtn">Meer lezen</Link>
-            </section>
+            <div className="container rijgebieden">
+                <section>
+                    <h1 id="rijgebiedentext">Rij gebieden</h1>
+                    <p id="rijgebiedencontent1">Bekijk hieronder de meest beroemde plaatsen waar Taxi T.C. naar toe rijdt. Wilt u meer informatie lezen van één van de plaatsnamen hieronder? Klik op de plaatsnaam die u wilt en lees meer.</p>
+                    <h2 id="rijgebiedencontent2">Beroemde gebieden</h2>
+                </section>
 
-            <section>
-                <h2>Zaandam</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/zaandam" id="zaandambtn">Meer lezen</Link>
-            </section>
+                <div>
+                    <Link href="/amsterdam">
+                        <section>
+                            <h3>Amsterdam <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Amstelveen</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/amstelveen" id="amstelveenbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/amstelveen">
+                        <section>
+                            <h3>Amstelveen<Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Diemen</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/diemen" id="diemenbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/zaandam">
+                        <section>
+                            <h3>Zaandam <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Hoofddorp</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/hoofddorp" id="hoofddorpbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/diemen">
+                        <section>
+                            <h3>Diemen <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Haarlem</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/haarlem" id="haarlembtn">Meer lezen</Link>
-            </section>
+                    <Link href="/hoofddorp">
+                        <section>
+                            <h3>Hoofddorp <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Assendelft</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/assendelft" id="assendelftbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/haarlem">
+                        <section>
+                            <h3>Haarlem <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Krommenie</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/krommenie" id="krommeniebtn">Meer lezen</Link>
-            </section>
+                    <Link href="/zaandijk">
+                        <section>
+                            <h3>Zaandijk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Wormerveer</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/wormerveer" id="wormerveerbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/krommenie">
+                        <section>
+                            <h3>Krommenie <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Zaandijk</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/zaandijk" id="zaandijkbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/assendelft">
+                        <section>
+                            <h3>Assendelft <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Koog aan de Zaan</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/koogaandezaan" id="koogaandezaanbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/wormerveer">
+                        <section>
+                            <h3>Wormerveer <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Oostzaan</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/oostzaan" id="oostzaanbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/oostzaan">
+                        <section>
+                            <h3>Oostzaan <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-            <section>
-                <h2>Landsmeer</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/landsmeer" id="landsmeerbtn">Meer lezen</Link>
-            </section>
+                    <Link href="/beverwijk">
+                        <section>
+                            <h3>Beverwijk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
 
-
-            <section>
-                <h2>Uitgeest</h2>
-                <p id="rijgebiedencontent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru</p>
-                <Link href="/uitgeest" id="uitgeestbtn">Meer lezen</Link>
-            </section>
-            
-        </div>
+                    <Link href="/heemskerk">
+                        <section>
+                            <h3>Heemskerk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
+                        </section>
+                    </Link>
+                </div>
+            </div>
+        </>
     )
   }
