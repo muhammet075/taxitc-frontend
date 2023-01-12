@@ -90,18 +90,6 @@ export default function Rijgebieden() {
                             <h3>Oostzaan <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
                         </section>
                     </Link>
-
-                    <Link href="/plaats/beverwijk">
-                        <section>
-                            <h3>Beverwijk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
-                        </section>
-                    </Link>
-
-                    <Link href="/plaats/heemskerk">
-                        <section>
-                            <h3>Heemskerk <Image src={arrowIco} alt="Pijl Icoon"/></h3> 
-                        </section>
-                    </Link>
                 </div>
             </div>
         </>

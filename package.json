@@ -12,7 +12,10 @@
   "dependencies": {
     "@next/font": "13.0.7",
     "aos": "^2.3.4",
+    "distance-calculator-js": "^1.0.0",
+    "google-distance": "^1.0.1",
     "local-storage": "^2.0.0",
+    "net": "^1.0.2",
     "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -20,5 +23,8 @@
     "sharp": "^0.31.3",
     "slider": "^1.0.4",
     "swiper": "^8.4.5"
+  },
+  "browser": {
+    "net": false
   }
 }

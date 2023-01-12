@@ -8,6 +8,7 @@ export default function Privacypolicy() {
     useEffect(() => {
         Translate();
     }, []);
+    
 
     return (
         <>

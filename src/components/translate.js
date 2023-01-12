@@ -144,15 +144,20 @@ export function Translate(){
         }catch(e){}
 
         try{
-            document.querySelector("#beverwijk1").innerHTML = translations[0].nl[0].beverwijk1;
-            document.querySelector("#beverwijk2").innerHTML = translations[0].nl[0].beverwijk2;
-            document.querySelector("#beverwijk3").innerHTML = translations[0].nl[0].beverwijk3;
-        }catch(e){}
+            document.querySelector("#offertetitle").innerHTML = translations[0].nl[0].offertetitle;
+            document.querySelector("#ophaaltitle").innerHTML = translations[0].nl[0].ophaaltitle;
+            document.querySelector("#bestemmingtitle").innerHTML = translations[0].nl[0].bestemmingtitle;
+            document.querySelector("#datumtitle").innerHTML = translations[0].nl[0].datumtitle;
+            document.querySelector("#voertuigtitle").innerHTML = translations[0].nl[0].voertuigtitle;
+            document.querySelector("#normaalautotitle").innerHTML = translations[0].nl[0].normaalautotitle;
+            document.querySelector("#berekenprijsbtn").innerHTML = translations[0].nl[0].berekenprijsbtn;
 
-        try{
-            document.querySelector("#heemskerk1").innerHTML = translations[0].nl[0].heemskerk1;
-            document.querySelector("#heemskerk2").innerHTML = translations[0].nl[0].heemskerk2;
-            document.querySelector("#heemskerk3").innerHTML = translations[0].nl[0].heemskerk3;
+            document.querySelector("#geschatteprijs").innerHTML = translations[0].nl[0].geschatteprijs;
+            document.querySelector("#geschatttetxt1").innerHTML = translations[0].nl[0].geschatttetxt1;
+            document.querySelector("#geschatttetxt2").innerHTML = translations[0].nl[0].geschatttetxt2;
+            document.querySelector("#afspraakbevestigenbtn").innerHTML = translations[0].nl[0].afspraakbevestigenbtn;
+            
+
         }catch(e){}
 
     } else if (language === "en") {
@@ -289,17 +294,20 @@ export function Translate(){
         }catch(e){}
 
         try{
-            document.querySelector("#beverwijk1").innerHTML = translations[0].en[0].beverwijk1;
-            document.querySelector("#beverwijk2").innerHTML = translations[0].en[0].beverwijk2;
-            document.querySelector("#beverwijk3").innerHTML = translations[0].en[0].beverwijk3;
-        }catch(e){}
+            document.querySelector("#offertetitle").innerHTML = translations[0].en[0].offertetitle;
+            document.querySelector("#ophaaltitle").innerHTML = translations[0].en[0].ophaaltitle;
+            document.querySelector("#bestemmingtitle").innerHTML = translations[0].en[0].bestemmingtitle;
+            document.querySelector("#datumtitle").innerHTML = translations[0].en[0].datumtitle;
+            document.querySelector("#voertuigtitle").innerHTML = translations[0].en[0].voertuigtitle;
+            document.querySelector("#normaalautotitle").innerHTML = translations[0].en[0].normaalautotitle;
+            document.querySelector("#berekenprijsbtn").innerHTML = translations[0].en[0].berekenprijsbtn;
 
-        try{
-            document.querySelector("#heemskerk1").innerHTML = translations[0].en[0].heemskerk1;
-            document.querySelector("#heemskerk2").innerHTML = translations[0].en[0].heemskerk2;
-            document.querySelector("#heemskerk3").innerHTML = translations[0].en[0].heemskerk3;
-        }catch(e){}
+            document.querySelector("#geschatteprijs").innerHTML = translations[0].en[0].geschatteprijs;
+            document.querySelector("#geschatttetxt1").innerHTML = translations[0].en[0].geschatttetxt1;
+            document.querySelector("#geschatttetxt2").innerHTML = translations[0].en[0].geschatttetxt2;
+            document.querySelector("#afspraakbevestigenbtn").innerHTML = translations[0].en[0].afspraakbevestigenbtn;
 
+        }catch(e){}
 
     }
 

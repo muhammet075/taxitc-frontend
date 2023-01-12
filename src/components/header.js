@@ -57,7 +57,7 @@ function Header() {
                     <Link href="/"><Image src={Logo} alt="Logo van Taxi T.C."/></Link>
                     <section>
                         <Link href="#"><span><Image src={MailIco} alt="Mail icoontje"/>taxi-tc@hotmail.com</span></Link>
-                        <Link href="#"><span><Image src={PhoneIco} alt="Telefoon icoontje"/>061234567</span></Link>
+                        <Link href="#"><span><Image src={PhoneIco} alt="Telefoon icoontje"/>0614622099</span></Link>
                         <Link href="#"><span><Image src={WhatsAppIco} alt="WhatsApp icoontje"/>WhatsApp</span></Link>
                     </section>
                 </div>
