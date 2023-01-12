@@ -32,9 +32,9 @@ export default function Foter() {
                             <li>KVK: 70061157</li>
                             <li>BTW: 020749697B03</li>
                             <li>IBAN: NL12INGB0008148386</li>
-                            <li><Link href="/"><Image src={phoneIco} alt="Telefoon Icon"/> 061234567</Link></li>
-                            <li><Link href="/"><Image src={mailIco} alt="Mail Icon"/> taxi-tc@hotmail.com</Link></li>
-                            <li><Link href="/"><Image src={WhatsAppIco} alt="WhatsApp Icon"/> WhatsApp</Link></li>
+                            <li><Link href="https://wa.me/?phone=31614622099"><Image src={phoneIco} alt="Telefoon Icon"/> 0614622099</Link></li>
+                            <li><Link href="mailto:taxi-tc@hotmail.com"><Image src={mailIco} alt="Mail Icon"/> taxi-tc@hotmail.com</Link></li>
+                            <li><Link href="https://wa.me/?phone=31614622099"><Image src={WhatsAppIco} alt="WhatsApp Icon"/> WhatsApp</Link></li>
                         </ul>
 
                         <ul>
