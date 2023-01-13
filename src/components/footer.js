@@ -45,6 +45,7 @@ export default function Foter() {
                             <li><Link href="/rijgebieden" id="footerlink4">Rij gebieden</Link></li>
                             <li><Link href="/afspraak" id="footerlink5">Afspraak</Link></li>
                             <li><Link href="/privacypolicy">Privacy Policy</Link></li>
+                            <li><Link href="/sitemap.xml">Sitemap</Link></li>
                         </ul>
                         
                         <ul>
