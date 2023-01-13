@@ -67,7 +67,7 @@ export default function Foter() {
                     </section>
 
                     <section>
-                        <p>&copy; Copyright <span id="currentyear">.</span> - <span id="footercopyright">Alle rechten voorbehouden.</span></p>
+                        <p>&copy; Copyright 2017 - <span id="currentyear">.</span> <span id="footercopyright">Alle rechten voorbehouden.</span></p>
                     </section>
                 </div>
             </footer>

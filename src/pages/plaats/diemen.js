@@ -30,8 +30,8 @@ export default function Diemen() {
 
             <div className="container afspraak plaatsafspraak">
                 <ul>
-                    <li><Link href="mailto:taxi-tc@hotmail.com"><Image src={goldPhoneIco} alt="Telefoon icoon"/> 06 12 34 56 78</Link></li>
-                    <li><Link href="mailto:taxi-tc@hotmail.com"><Image src={WhatsAppIco} alt="WhatsApp icoon"/> WhatsApp</Link></li>
+                    <li><Link href="https://wa.me/?phone=31614622099"><Image src={goldPhoneIco} alt="Telefoon icoon"/> 06 14 62 20 99</Link></li>
+                    <li><Link href="https://wa.me/?phone=31614622099"><Image src={WhatsAppIco} alt="WhatsApp icoon"/> WhatsApp</Link></li>
                     <li><Link href="mailto:taxi-tc@hotmail.com"><Image src={goldMailIco} alt="Mail icoon"/> Mail</Link></li>
                 </ul>
             </div>

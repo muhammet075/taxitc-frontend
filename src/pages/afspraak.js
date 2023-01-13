@@ -103,6 +103,7 @@ export default function Afspraak() {
           totalPrice = kmPrice.toFixed(2);
 
           console.log(totalPrice);
+          console.log(totaalKm)
 
           finalPrice.innerHTML = totalPrice;
         } else if (document.querySelector("#limo").checked) {
@@ -162,6 +163,7 @@ export default function Afspraak() {
             <h3 id="ophaaltitle">Ophaal locatie</h3>
             <select className="ophaalplaats">
               <option>Amsterdam</option>
+              <option>Wormerveer</option>
               <option>Zaandam</option>
               <option>Amstelveen</option>
               <option>Weesp</option>

@@ -16,7 +16,7 @@ export default [
 
                 calculatortitel1: "Taxi T.C.",
                 calculatortitel2: "Bereken Prijs",
-                calculatortext1: "Taxi T.C. is vooral actief in Amsterdam, de Zaanstreek en omstreken! Wij bezorgen u met comfort in onze Mercedes-Benz Vito.",
+                calculatortext1: "Taxi T.C. is vooral actief in Amsterdam, de Zaanstreek en omstreken! Wij bezorgen u met comfort in onze nette voertuigen.",
                 calculatortext2: "Wilt u direct opgehaald worden? Bel ons dan direct op 0614622099 of maak een afspraak via de onderstaande knop. U kunt ook uw prijs van uw rit berekenen met behulp van de calculator. De genoemde prijs is slechts een schatting van de rit.",
                 calculatortext3: "Bij Taxi T.C. kunt u altijd pinnen. U kunt ook contactloos betalen met uw bankpas of mobiel. Wij accepteren ook creditcards, zoals Mastercard, Visa en American Express Card. Ook kunt u met cash geld bij ons betalen.",
                 calculatortext4: "Prijs indicatie:",
