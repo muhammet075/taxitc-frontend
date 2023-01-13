@@ -92,14 +92,14 @@ export default function Afspraak() {
         );
 
         if (document.querySelector("#normaalauto").checked) {
-          let kmPrice = totaalKm * 3.11 + 6.83;
+          let kmPrice = totaalKm * 5.11 + 6.83;
           totalPrice = kmPrice.toFixed(2);
 
           console.log(totalPrice);
 
           finalPrice.innerHTML = totalPrice;
         } else if (document.querySelector("#bus").checked) {
-          let kmPrice = totaalKm * 3.46 + 8.83;
+          let kmPrice = totaalKm * 5.46 + 8.83;
           totalPrice = kmPrice.toFixed(2);
 
           console.log(totalPrice);
@@ -107,7 +107,7 @@ export default function Afspraak() {
 
           finalPrice.innerHTML = totalPrice;
         } else if (document.querySelector("#limo").checked) {
-          let kmPrice = totaalKm * 3.46 + 8.83;
+          let kmPrice = totaalKm * 5.46 + 8.83;
           totalPrice = kmPrice.toFixed(2);
 
           console.log(totalPrice);
