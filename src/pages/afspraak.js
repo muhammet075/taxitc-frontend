@@ -163,7 +163,6 @@ export default function Afspraak() {
             <h3 id="ophaaltitle">Ophaal locatie</h3>
             <select className="ophaalplaats">
               <option>Amsterdam</option>
-              <option>Wormerveer</option>
               <option>Zaandam</option>
               <option>Amstelveen</option>
               <option>Weesp</option>
@@ -171,6 +170,9 @@ export default function Afspraak() {
               <option>Oostzaan</option>
               <option>Haarlem</option>
               <option>Hoofddorp</option>
+              <option>Wormerveer</option>
+              <option>Krommenie</option>
+              <option>Assendelft</option>
               <option>Badhoevedorp</option>
               <option>Oostzaan</option>
               <option>Landsmeer</option>
