@@ -330,6 +330,17 @@ export default [
     "population_proper": "68695"
   }, 
   {
+    "city": "Badhoevedorp", 
+    "lat": "52.3380", 
+    "lng": "4.7802", 
+    "country": "Netherlands", 
+    "iso2": "NL", 
+    "admin_name": "Noord-Holland", 
+    "capital": "minor", 
+    "population": "68695", 
+    "population_proper": "68695"
+  }, 
+  {
     "city": "Bergen op Zoom", 
     "lat": "51.5000", 
     "lng": "4.3000", 

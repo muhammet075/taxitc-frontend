@@ -12,18 +12,27 @@ import sklassepng from "../assets/sklassepng.png";
 import vitopng from "../assets/vitopng.png";
 
 export default function Afspraak() {
+
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    Translate();
+  let uren;
+  let minuten;
 
-    const ophaalplaats = document.querySelector(".ophaalplaats");
+  function changetime(){
+    uren = document.querySelector(".ureninput").value;
+    minuten = document.querySelector(".minuteninput").value;
+  }
+
+
+  useEffect(() => {
+
+
+    document.querySelector(".datepicker").valueAsDate = new Date();
+
     let resultPlaces = document.querySelectorAll(".resultlist");
     let searchPlaceBar = document.querySelector(".searchinput");
-    let timedata = document.querySelector("#appt");
     const resultul = document.querySelector(".resultul");
-    const calculatebtn = document.querySelector(".calculatebtn");
-    const finalPrice = document.querySelector(".totalprice");
+
 
     searchPlaceBar.addEventListener("click", () => {
       resultul.classList.remove("displaynone");
@@ -36,163 +45,187 @@ export default function Afspraak() {
       });
     }
 
-    let radiovoertuig = document.querySelectorAll(".radiovoertuig");
+  });
 
-    for (let i = 0; i < radiovoertuig.length; i++) {
-      radiovoertuig[i].addEventListener("click", () => {
-        if (
-          radiovoertuig[i].checked &&
-          ophaalplaats.length > 1 &&
-          searchPlaceBar.value.length > 1 &&
-          document.querySelector(".datepicker").value.length > 1 &&
-          document.querySelector("#appt").value.length > 1
-        ) {
-          calculatebtn.classList.remove("disabledbtn");
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-      });
-    }
 
-    let totalPrice;
-    let plaats1;
-    let plaats2;
+  function calculatePrice(){
+
+    let plaats1 = document.querySelector(".ophaalplaats").value;
+    let plaats2 = document.querySelector(".searchinput").value;
+
+    let plaatsnaam1
+    let plaatsnaam2
+          
+    let plaatsNamenArray = [];
+    let plaatsenData = [plaatsen];
+    let totaalKm;
+    let newKm; 
+    let helftKm;
+
+    let normaalprijs;
+    let busprijs;
+    let luxeprijs;
+
     let zoekPlaats1;
     let zoekPlaats2;
     let plaats1optie = document.querySelector(".ophaalplaats").value;
 
-    calculatebtn.addEventListener("click", () => {
-      let plaatsNamenArray = [];
-      let plaatsenData = [plaatsen];
+    for (let i = 0; i < plaatsen.length; i++) {
+      plaatsNamenArray.push(plaatsen[i].city);
+    }
 
-      for (let i = 0; i < plaatsen.length; i++) {
-        plaatsNamenArray.push(plaatsen[i].city);
-      }
+    let plaats2optie = plaatsNamenArray.find(
+      (item) => item === document.querySelector(".searchinput").value
+    );
 
-      let plaats2optie = plaatsNamenArray.find(
-        (item) => item === document.querySelector(".searchinput").value
-      );
+    for (let i = 0; i < plaatsenData.length; i++) {
+      plaatsnaam1 = plaatsenData[i].find((item) => item.city === plaats1optie);
+      plaatsnaam2 = plaatsenData[i].find((item) => item.city === plaats2optie);
+    }
 
-      for (let i = 0; i < plaatsenData.length; i++) {
-        plaats1 = plaatsenData[i].find((item) => item.city === plaats1optie);
-        plaats2 = plaatsenData[i].find((item) => item.city === plaats2optie);
+    try {
+      zoekPlaats1 = { lat: plaatsnaam1.lat, long: plaatsnaam1.lng };
+      zoekPlaats2 = { lat: plaatsnaam2.lat, long: plaatsnaam2.lng };
 
-        console.log(plaats1);
-        console.log(plaats2);
-      }
+      totaalKm = DistanceCalculator.calculate(
+        zoekPlaats1,
+        zoekPlaats2,
+        "km"
+      ) 
+    
+        helftKm = totaalKm / 3;
+        newKm = totaalKm + helftKm;
+        
+      }catch(e){};
 
-      try {
-        zoekPlaats1 = { lat: plaats1.lat, long: plaats2.lng };
-        zoekPlaats2 = { lat: plaats2.lat, long: plaats2.lng };
+      console.log(plaats1 + " " + plaats2 + " " + newKm);
 
-        let totaalKm = DistanceCalculator.calculate(
-          zoekPlaats1,
-          zoekPlaats2,
-          "km"
-        );
+      normaalprijs = newKm * 3.11;
+      busprijs =  newKm * 3.46;
+      luxeprijs = newKm * 3.46;
 
-        if (document.querySelector("#normaalauto").checked) {
-          let kmPrice = totaalKm * 5.11 + 6.83;
-          totalPrice = kmPrice.toFixed(2);
-
-          console.log(totalPrice);
-
-          finalPrice.innerHTML = totalPrice;
-        } else if (document.querySelector("#bus").checked) {
-          let kmPrice = totaalKm * 5.46 + 8.83;
-          totalPrice = kmPrice.toFixed(2);
-
-          console.log(totalPrice);
-          console.log(totaalKm)
-
-          finalPrice.innerHTML = totalPrice;
-        } else if (document.querySelector("#limo").checked) {
-          let kmPrice = totaalKm * 5.46 + 8.83;
-          totalPrice = kmPrice.toFixed(2);
-
-          console.log(totalPrice);
-
-          finalPrice.innerHTML = totalPrice;
-        }
-      } catch (e) {}
-    });
-
-    const bevestigBtn = document.querySelector(".afspraakbtn");
-    let pickDate = document.querySelector(".datepicker");
-
-    bevestigBtn.addEventListener("click", () => {
-      console.log(totalPrice);
-
-      let message =
-        "Prijs:%20€" +
-        totalPrice +
-        "%0a" +
-        "Ophaalplaats:%20" +
-        plaats1optie +
-        "%0a" +
-        "Afleverplaats:%20" +
-        searchPlaceBar.value +
-        "%0a" +
-        "Datum:%20" +
-        pickDate.value;
-      +"%20" + timedata.value;
-
-      console.log(message);
-      window.location = "https://wa.me/?phone=31614622099&text=" + message;
-    });
-  });
-
-  function priceCalculate() {
-    document.querySelector(".offerte").classList.remove("displaynone");
-    document.querySelector(".offertedetails").classList.add("displaynone");
+      if (plaats1.length > 1 && plaats2.length > 1){
+        document.querySelector(".normaleprijs").innerHTML = normaalprijs.toFixed(2);
+        document.querySelector(".busprijs").innerHTML = busprijs.toFixed(2);
+        document.querySelector(".luxeprijs").innerHTML = luxeprijs.toFixed(2);
+        
+        document.querySelector(".normaleafspraak").classList.remove("displaynone");
+        document.querySelector(".busafspraak").classList.remove("displaynone");
+        document.querySelector(".luxeafspraak").classList.remove("displaynone");
+    }
   }
 
+  
+  function normaleafspraak(){
+    let message =
+    "NIEUWE AFSPRAAK VOOR NORMALE AUTO%0a" + 
+    "Prijs:%20€" +
+    document.querySelector(".normaleprijs").innerHTML +
+    "%0a" +
+    "Van:%20" +
+    document.querySelector(".ophaalplaats").value +
+    "%0a" +
+    "Naar:%20" +
+    document.querySelector(".searchinput").value +
+    "%0a" +
+    "Datum:%20" +
+    document.querySelector(".datepicker").value +
+    "%0a" +
+    "Tijd:%20" +
+    uren + ":" + minuten +
+    "%20";
+    window.location = "https://wa.me/?phone=31614622099&text=" + message;
+  }
+
+
+
+
+ 
+  function busafspraak(){
+    let message =
+    "NIEUWE AFSPRAAK VOOR BUS/VAN%0a" + 
+    "Prijs:%20€" +
+    document.querySelector(".busprijs").innerHTML +
+    "%0a" +
+    "Van:%20" +
+    document.querySelector(".ophaalplaats").value +
+    "%0a" +
+    "Naar:%20" +
+    document.querySelector(".searchinput").value +
+    "%0a" +
+    "Datum:%20" +
+    document.querySelector(".datepicker").value +
+    "%0a" +
+    "Tijd:%20" +
+    uren + ":" + minuten +
+    "%20";
+    window.location = "https://wa.me/?phone=31614622099&text=" + message;
+  }
+
+  function luxeafspraak(){
+    let message =
+    "NIEUWE AFSPRAAK VOOR LUXE AUTO%0a" + 
+    "Prijs:%20€" +
+    document.querySelector(".luxeprijs").innerHTML +
+    "%0a" +
+    "Van:%20" +
+    document.querySelector(".ophaalplaats").value +
+    "%0a" +
+    "Naar:%20" +
+    document.querySelector(".searchinput").value +
+    "%0a" +
+    "Datum:%20" +
+    document.querySelector(".datepicker").value +
+    "%0a" +
+    "Tijd:%20" +
+    uren + ":" + minuten +
+    "%20";
+    window.location = "https://wa.me/?phone=31614622099&text=" + message;
+  }
+
+
+
   return (
-    <div className={styles.afspraak}>
-      <div>
-        <Head>
-          <title>Taxi T.C. - Afspraak</title>
-        </Head>
+    <>
+      <Head>
+        <title>Taxi T.C. - Afspraak</title>
+      </Head>
+      
+      <div className={styles.afspraak}>
+        <div>
 
-        <div className="offertedetails">
-          <section>
-            <h2 id="offertetitle">Waar wil je heen?</h2>
-          </section>
-
-          <section>
-            <h3 id="ophaaltitle">Ophaal locatie</h3>
-            <select className="ophaalplaats">
-              <option>Amsterdam</option>
-              <option>Zaandam</option>
-              <option>Amstelveen</option>
-              <option>Weesp</option>
-              <option>Zwanenburg</option>
-              <option>Oostzaan</option>
-              <option>Haarlem</option>
-              <option>Hoofddorp</option>
-              <option>Wormerveer</option>
-              <option>Krommenie</option>
-              <option>Assendelft</option>
-              <option>Badhoevedorp</option>
-              <option>Oostzaan</option>
-              <option>Landsmeer</option>
-            </select>
-          </section>
-
-          <section>
-            <h3 id="bestemmingtitle">Bestemming</h3>
             <div>
-              <section>
-                <input
-                  className="searchinput"
-                  type="text"
-                  placeholder="Typ een plaats of een stad in."
-                  onChange={(event) => {
-                    setSearchTerm(event.target.value);
-                  }}
-                />
-              </section>
-              <ul className="resultul">
+              <h1>Afspraak</h1>
+              <p>Maak een afspraak door de formulier hier beneden in te vullen. Na dat u de afspraak bevesitgt heeft worden de exacte ophaal en aflever adressen bij u gevraagd.</p>
+            </div>
+
+
+            <section>
+              <div>
+                <h2>Van</h2>
+                <select className="ophaalplaats" onChange={calculatePrice}>
+                  <option disabled selected value> Kies een plaats</option>
+                  <option>Amsterdam</option>
+                  <option>Zaandam</option>
+                  <option>Amstelveen</option>
+                  <option>Weesp</option>
+                  <option>Zwanenburg</option>
+                  <option>Oostzaan</option>
+                  <option>Haarlem</option>
+                  <option>Hoofddorp</option>
+                  <option>Wormerveer</option>
+                  <option>Krommenie</option>
+                  <option>Assendelft</option>
+                  <option>Badhoevedorp</option>
+                  <option>Oostzaan</option>
+                  <option>Landsmeer</option>
+                </select>
+              </div>
+
+              <div>
+                <h2>Naar</h2>
+                <input className="searchinput" type="text" placeholder="Typ een plaats in" onChange={(event) => {setSearchTerm(event.target.value)}}/>
+                <ul className="resultul">
                 {plaatsen
                   .filter((val) => {
                     if (searchTerm == "") {
@@ -206,113 +239,90 @@ export default function Afspraak() {
                   .map((val, key) => {
                     return (
                       <li key={key}>
-                        <button className="resultlist">{val.city}</button>
+                        <button onClick={calculatePrice} className="resultlist">{val.city}</button>
                       </li>
                     );
                   })}
               </ul>
               <section className="searchresults"></section>
-            </div>
-          </section>
+              </div>
+            </section>
 
-          <section>
-            <h3 id="datumtitle">Datum en tijdstip</h3>
-            <div>
-              <input
-                type="date"
-                className="datepicker"
-                min={new Date().toISOString().split("T")[0]}
-              />
-              <input
-                type="time"
-                id="appt"
-                name="appt"
-                min="09:00"
-                max="18:00"
-                required
-              />
-            </div>
-          </section>
+            <section>
+              <h2>Datum en tijdstip</h2> 
 
-          <section>
-            <h3 id="voertuigtitle">Kies voertuig</h3>
-            <ul>
-              <li>
-                <input
-                  type="radio"
-                  id="normaalauto"
-                  name="voertuig"
-                  value="normaalauto"
-                  className="radiovoertuig"
-                />
-                <label for="normaalauto">
-                  <Image src={autopng} alt="Normaal Auto" />
-                  <span id="normaalautotitle">Normaal Auto</span>
-                </label>
-              </li>
-              <li>
-                <input
-                  type="radio"
-                  id="bus"
-                  name="voertuig"
-                  value="bus"
-                  className="radiovoertuig"
-                />
-                <label for="bus">
-                  <Image src={vitopng} alt="Vito Auto" />
-                  Bus/Van
-                </label>
-              </li>
-              <li>
-                <input
-                  type="radio"
-                  id="limo"
-                  name="voertuig"
-                  value="limo"
-                  className="radiovoertuig"
-                />
-                <label for="limo">
-                  <Image src={sklassepng} alt="Limo Auto" />
-                  S-Klasse / 7-Serie
-                </label>
-              </li>
-            </ul>
-          </section>
+              <section>
+                  <div>
+                    <input type="date" className="datepicker" min={new Date().toISOString().split("T")[0]} />
+                  </div>
 
-          <section>
-            <button
-              id="berekenprijsbtn"
-              className="calculatebtn disabledbtn"
-              onClick={priceCalculate}
-            >
-              Bereken Prijs
-            </button>
-          </section>
+                  <div>
+                    <select className="ureninput" onChange={changetime}>
+                      <option value={17}>17</option>
+                      <option value={18}>18</option>
+                      <option value={19}>19</option>
+                      <option value={20}>20</option>
+                      <option value={21}>21</option>
+                      <option value={22}>22</option>
+                      <option value={23}>23</option>
+                      <option value={0}>00</option>
+                      <option value={1}>01</option>
+                    </select>
+
+                    <p>:</p>
+                    
+                    <select className="minuteninput" onChange={changetime}>
+                      <option value={0}>00</option>
+                      <option value={15}>15</option>
+                      <option value={30}>30</option>
+                      <option value={45}>45</option>
+                    </select>
+
+
+
+                    <p>Beschikbare tijden vanaf 17:00 tot en met 02:00</p>
+                  </div>
+                </section>
+
+            </section>
         </div>
 
-        <div className="offerte displaynone">
-          <p id="geschatteprijs">Geschatte prijs:</p>
-          <span>
-            &euro; <p className="totalprice">...</p>
-          </span>
-          <p>
-            <span id="geschatttetxt1">
-            De geschatte prijs kan met enkele euro's minder zijn of de geschatte
-            prijs kan ook oplopen met enkele euro's. Dat hangt af van de
-            ophaalstraat en afleverstraat.
-            </span>
-            <span id="geschatttetxt2">
-            Om uw afspraak te bevestigen klikt u hieronder op de bevestig
-            knop en u zal doorverwezen worden naar WhatsApp. Na dat uw bericht
-            succesvol verstuurd is, krijgt u een Tikkie als aanbetaling van de
-            helft van de prijs wat hierboven is opgenoemd. Dan is uw afspraak
-            met succes geregistreerd.
-            </span>
-          </p>
-          <button id="afspraakbevestigenbtn" className="afspraakbtn">Bevestig Afspraak</button>
+        <div>
+
+          <p>De prijzen hierondeer zijn schattingen van de rit. De prijs kan met enkele euro's oplopen of aflopen. Dat hangt af van de ophaalstraat en afleverstraat.</p>  
+          <p>Om uw afspraak te bevestigen kiest u uw gewenste soort auto en zal doorverwezen worden naar WhatsApp. Na dat uw bericht succesvol verstuurd is, krijgt u een Tikkie als aanbetaling van de helft van de prijs wat hier onder per auto is opgenoemd. Dan is uw afspraak met succes geregistreerd en stuurt u uw ophaal- en aflever adres door.</p>
+          
+          <div>
+            <section>
+              <Image src={autopng} alt="Normaal Auto" />
+              <h2>Normale Auto</h2>
+              <p>(E-Klasse)</p>
+              <p>Prijs:</p>
+              <p>&euro; <span className="normaleprijs">0.00</span></p>
+              <button className="displaynone normaleafspraak" onClick={normaleafspraak}>Afspraak</button>
+            </section>
+
+            <section>
+              <Image src={vitopng} alt="Vito Auto" />
+              <h2>Bus / Van</h2>
+              <p>(Vito)</p>
+              <p>Prijs:</p>
+              <p>&euro; <span className="busprijs">0.00</span></p>
+              <button className="displaynone busafspraak" onClick={busafspraak}>Afspraak</button>
+            </section>
+
+            <section>
+              <Image src={sklassepng} alt="Limo Auto" />
+              <h2>Luxe Auto</h2>
+              <p>(S-Klasse / 7-Serie)</p>
+              <p>Prijs:</p>
+              <p>&euro; <span className="luxeprijs">0.00</span></p>
+              <button className="displaynone luxeafspraak" onClick={luxeafspraak}>Afspraak</button>
+            </section>
+          </div>
+          <Image src={betaalmethodes} alt="Betaalmethodes"/>
         </div>
-      </div>
-      <Image src={betaalmethodes} />
-    </div>
+      </div> 
+    </>
   );
 }

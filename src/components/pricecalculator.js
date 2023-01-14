@@ -9,13 +9,11 @@ function PriceCalculator() {
 
       function calculatePrice(){
         const kmAmount = document.querySelector("#kmAmount").value
-        console.log(kmAmount)
         let kmPrice = kmAmount * 3.57 + 6.83;
         let totalPrice = kmPrice.toFixed(2);
         document.querySelector("#totalPrice").innerHTML = totalPrice;
 
         if (kmAmount > 1000){
-            console.log("meer")
             let newKm = 50;
             let kmPrice = 999 * 3.57 + 6.83;
             let totalPrice = kmPrice.toFixed(2);

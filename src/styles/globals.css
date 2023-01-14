@@ -450,13 +450,14 @@ main{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 250px;
   background: #ffff;
   width: 500px;
   position: absolute;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  top: 35px;
+  top: 66px;
+  border-radius: 5px;
+  max-height: 100vh;
 }
 
 .resultlist{
@@ -466,13 +467,18 @@ main{
   font-size: 1em;
 }
 
+.resultul li:nth-child(even){
+  background-color: #f1f1f1;
+}
+
 .resultul li button{
   width: 100%;
   text-align: initial;
+  cursor: pointer;
 }
 
 .resultul li:hover{
-  background-color: #e4e4e4;
+  background-color: #DDC06F;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -492,8 +498,23 @@ main{
   .afspraakbtn, .calculatebtn{
     width: 100%;
   }
+
+
+  .ophaalplaats{
+    width: 80vw !important;
+}
+
 }
 
 #geschatttetxt1, #geschatttetxt2{
   font-size: 1.2em;
+}
+
+.ureninput, .minuteninput{
+  padding: 10px 0 !important;
+  width: 65px !important;
+  margin: 0 5px !important;
+  text-align: center !important;
+  border-radius: 3px !important;
+  border: 2px solid #ba9037 !important;
 }

@@ -1,119 +1,243 @@
-.afspraak > img{
-    max-width: 600px;
-    height: auto;
-    margin: auto;
-    display: block;
-    margin-top: 20px;
+.afspraak{
+    background: -webkit-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+    width: 100%;
+    color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 50px;
+}
+
+.afspraak h1{
+    margin-bottom: 10px;
 }
 
 .afspraak > div{
-    background: -webkit-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
-    color: #ffff;
-    padding: 25px;
-    max-width: 800px;
+    max-width: 1250px;
     margin: auto;
-    margin-top: 220px;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.afspraak > div > div section h2{
-    margin-bottom: 15px;
-    font-size: 1.5em;
+.afspraak h2{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
-.afspraak > div > div section h3{
-    margin-top: 20px;
-    font-size: 0.8em;
+.afspraak input[type=text], .afspraak input[type=date], .afspraak select{
+    padding: 10px;
+    width: 550px;
+    border-radius: 4px;
+    border: 2px solid #ba9037;
+    margin-right: 50px;
+    font-family: system-ui, -apple-system;
 }
 
-.afspraak > div > div section input, .afspraak > div > div section select{
-    width: 80%;
-    padding: 15px 5px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.afspraak select{
+    width: 574px;
 }
 
-.afspraak > div > div section:nth-of-type(2) select{
-    -webkit-appearance: none;
+.afspraak input[type=number]:first-child{
+    margin-left: 0;
 }
 
-.afspraak > div > div section:nth-of-type(4) input{
-    -webkit-appearance: none;
-    padding: 20px 5px;
+
+.afspraak > div > section:nth-of-type(1){
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.afspraak > div > section:nth-of-type(1) div{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.afspraak > div:nth-of-type(1) section:nth-of-type(2){
+    padding-bottom: 75px;
+    border-top: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-image: linear-gradient( to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C ) 100% 0 100% 0;
+}
+
+.afspraak > div > section:nth-of-type(2) section{
+    display: flex;
+    align-items: center;
+}
+
+
+.afspraak > div > section:nth-of-type(2) section div input{
+    width: 350px;
+}
+
+.afspraak > div > section:nth-of-type(2) section div:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.afspraak > div > div section:nth-of-type(5) input{
-    display: block;
-    margin: auto;
-    padding: 0;
+.afspraak > div > section:nth-of-type(2) section div p:last-child{
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 300;
+    width: 150px;
 }
 
-.afspraak > div > div section ul{
+
+
+
+
+
+
+
+
+
+
+.afspraak > div:nth-of-type(2) div{
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    margin-bottom: 25px;    
-    margin-top: 5px;
+    width: 900px;
+    align-items: center;
+    padding: 30px 0;
 }
 
-.afspraak > div > div section:nth-child(4) div{
-    display: flex;
-}
-
-.afspraak > div > div section:nth-child(1) input{
-    padding-right: 0px;
-}
-
-.afspraak > div > div section label{
-    display: flex;
-    flex-direction: column;
-    text-align: center;    
-}
-
-.afspraak > div > div section label img{
-    height: 80px;
-    width: auto;    
-}
-
-.afspraak > div > div section:nth-child(3) div{
+.afspraak > div:nth-of-type(2) div section{
+    text-align: center;
     position: relative;
+    width: 200px;
+    height: 230px;
+    padding: 10px;
+    background: #373737;
+    border-bottom: 2px;
+    border-style: solid;
+    border-image: linear-gradient( to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C ) 100% 0 100% 0;
 }
 
-.afspraak > div > div section:nth-child(4) div input:nth-child(1){
-    width: 45%;
-    margin-right: 10px;
+.afspraak > div:nth-of-type(2) div section img{
+    width: auto;
+    height: 75px;
+    margin: 10px 0;
 }
 
-.afspraak > div > div section:nth-child(4) div input:nth-child(2){
-    width: 32%;
+.afspraak > div:nth-of-type(2) div section p:nth-of-type(1){
+    border-bottom: 1px solid #797979;
+    padding-bottom: 15px;
+}
+
+.afspraak > div:nth-of-type(2) div section p:nth-of-type(2){   
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.6em;
+    margin-top: 10px;
+}
+
+.afspraak > div:nth-of-type(2) div section p:nth-of-type(3){
+    margin-top: 12px;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #119de4 ;
 }
 
 
+.afspraak > div:nth-of-type(2) div section button{
+    position: absolute;
+    bottom: -50px;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #0077b4;
+    color: #ffff;
+    border: none;
+    padding: 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: system-ui, -apple-system;
+}
 
-@media only screen and (max-width: 800px) {
+
+.afspraak > div:nth-of-type(2) > p{
+    margin: 15px 0;
+}
+
+.afspraak > div:nth-of-type(2) > img{
+    width: 50%;
+    height: auto;
+    margin: 75px 0;
+}
+
+@media only screen and (max-width: 1275px) {
     .afspraak > div{
-        border-radius: 0px;
-        margin-top: 0;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .afspraak > div:nth-of-type(2) div{
+        width: 100%;
     }
 
-    .afspraak > img{
+    .afspraak > div:nth-of-type(2) > img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .afspraak > div:nth-of-type(2) div section{
+        width: 130px;
+        height: 210px;
+    }
+
+    .afspraak > div:nth-of-type(2) div section img{
+        height: 55px;
+    }
+
+    .afspraak > div:nth-of-type(2) div section p:nth-of-type(1){
+        font-size: 0.5em;
+        margin-top: 10px;
+    }
+
+    .afspraak > div:nth-of-type(2) div section button{
         width: 90%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .afspraak > div > div section label img{
-        height: auto;
-        width: 60px;
-        margin: auto;
+    .afspraak input[type=text], .afspraak input[type=date], .afspraak select{
+        width: 75vw;
     }
 
-    .afspraak > div > div section ul{
-        left: 0px;
-        width: 100%;
+    .afspraak > div > section:nth-of-type(2) section div input{
+        width: 200px;
+        margin-right: 25px;
+    }    
+}
+
+@media only screen and (max-width: 520px) {
+    .afspraak > div:nth-of-type(2) div section{
+        width: 30%;
+        height: 173px;
+        padding: 15px 0;
+    }
+
+    .afspraak > div:nth-of-type(2) div section img{
+        height: 40px;
+    }
+
+    .afspraak h2{
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    .afspraak > div:nth-of-type(2) div section p:nth-of-type(3){
+        font-size: 1em;
+    }
+    
+    .afspraak > div > section:nth-of-type(2) section div input{
+        width: auto;
     }
 }
