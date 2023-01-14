@@ -196,9 +196,8 @@ export default function Afspraak() {
 
             <div>
               <h1>Afspraak</h1>
-              <p>Maak een afspraak door de formulier hier beneden in te vullen. Na dat u de afspraak bevesitgt heeft worden de exacte ophaal en aflever adressen bij u gevraagd.</p>
+              <p>Maak een afspraak door de formulier hier beneden in te vullen. Na dat u de afspraak bevesitgt heeft worden de exacte ophaal en aflever adressen bij u gevraagd. De minimale prijs van een rit is altijd €25,-</p>
             </div>
-
 
             <section>
               <div>

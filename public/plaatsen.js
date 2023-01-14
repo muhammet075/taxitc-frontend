@@ -8998,6 +8998,17 @@ export default [
     "population_proper": ""
   }, 
   {
+    "city": "Schiphol", 
+    "lat": "52.3105", 
+    "lng": "4.7683", 
+    "country": "Netherlands", 
+    "iso2": "NL", 
+    "admin_name": "Gelderland", 
+    "capital": "minor", 
+    "population": "", 
+    "population_proper": ""
+  }, 
+  {
     "city": "Enschede", 
     "lat": "52.2183", 
     "lng": "6.8958", 

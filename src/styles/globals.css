@@ -499,9 +499,12 @@ main{
     width: 100%;
   }
 
-
   .ophaalplaats{
     width: 80vw !important;
+}
+
+.resultul{
+  width: 90%;
 }
 
 }
@@ -511,10 +514,9 @@ main{
 }
 
 .ureninput, .minuteninput{
-  padding: 10px 0 !important;
+  padding: 10px 0 10px 10px !important;
   width: 65px !important;
   margin: 0 5px !important;
-  text-align: center !important;
   border-radius: 3px !important;
   border: 2px solid #ba9037 !important;
 }

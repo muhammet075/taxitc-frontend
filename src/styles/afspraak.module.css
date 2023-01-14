@@ -29,6 +29,13 @@
     border: 2px solid #ba9037;
     margin-right: 50px;
     font-family: system-ui, -apple-system;
+    -webkit-appearance: none;
+    position: relative;
+    color: #000;
+}
+
+.afspraak input[type=text]::placeholder{
+    color: #000;
 }
 
 .afspraak select{
@@ -211,6 +218,10 @@
         width: 75vw;
     }
 
+    .afspraak > div:nth-of-type(2) > img{
+        margin-top: 50px;
+    }
+
     .afspraak > div > section:nth-of-type(2) section div input{
         width: 200px;
         margin-right: 25px;
@@ -238,6 +249,7 @@
     }
     
     .afspraak > div > section:nth-of-type(2) section div input{
-        width: auto;
+        width: 120px;
+        text-align: initial;
     }
 }
