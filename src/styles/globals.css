@@ -21,6 +21,15 @@ main{
   display: none !important;
 }
 
+.closelanguages{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .disabledbtn{
   pointer-events: none !important;
   cursor: no-drop !important;
@@ -30,6 +39,7 @@ main{
   background: #919191 !important;
   color: #c0c0c0 !important;
 }
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -110,14 +120,12 @@ main{
   top: 25px;
   height: 50px;
   width: 50px;
+  background: none;
+  border: none;
 }
 
 #hamburgerclosebtn img{
   margin-top: 3px;
-}
-
-#nlflag{
-  display: none;
 }
 
 #whatsappbtn{
@@ -492,6 +500,20 @@ main{
 
 .offerte span p{
   margin: 0;
+}
+
+.vanarrowico{
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  width: 20px;
+  height: auto;
+  right: 60px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  touch-action: none;
 }
 
 @media only screen and (max-width: 600px) {

@@ -10,6 +10,7 @@ import betaalmethodes from "../assets/betaalmethodes.png";
 import autopng from "../assets/autopng.png";
 import sklassepng from "../assets/sklassepng.png";
 import vitopng from "../assets/vitopng.png";
+import arrowIco from "../assets/icons/arrow.png";
 
 export default function Afspraak() {
 
@@ -44,6 +45,8 @@ export default function Afspraak() {
         resultul.classList.add("displaynone");
       });
     }
+
+    Translate();
 
   });
 
@@ -195,15 +198,16 @@ export default function Afspraak() {
         <div>
 
             <div>
-              <h1>Afspraak</h1>
-              <p>Maak een afspraak door de formulier hier beneden in te vullen. Na dat u de afspraak bevesitgt heeft worden de exacte ophaal en aflever adressen bij u gevraagd. De minimale prijs van een rit is altijd €25,-</p>
+              <h1 id="afspraaktitle">Afspraak</h1>
+              <p id="afspraaktext1">Maak een afspraak door de formulier hier beneden in te vullen. Na dat u de afspraak bevesitgt heeft worden de exacte ophaal en aflever adressen bij u gevraagd. De minimale prijs van een rit is altijd €25,-</p>
             </div>
 
             <section>
               <div>
-                <h2>Van</h2>
+                <h2 id="afspraakvan">Van</h2>
+                <div>
                 <select className="ophaalplaats" onChange={calculatePrice}>
-                  <option disabled selected value> Kies een plaats</option>
+                  <option disabled selected value id="firstcity"> Kies een plaats</option>
                   <option>Amsterdam</option>
                   <option>Zaandam</option>
                   <option>Amstelveen</option>
@@ -219,11 +223,15 @@ export default function Afspraak() {
                   <option>Oostzaan</option>
                   <option>Landsmeer</option>
                 </select>
+                <Image src={arrowIco} className="vanarrowico"/>
+                </div>
               </div>
 
               <div>
-                <h2>Naar</h2>
-                <input className="searchinput" type="text" placeholder="Typ een plaats in" onChange={(event) => {setSearchTerm(event.target.value)}}/>
+                <h2 id="afspraaknaar">Naar</h2>
+                <div>
+                  <input className="searchinput" type="text" placeholder="Typ een plaats in" onChange={(event) => {setSearchTerm(event.target.value)}}/>
+                </div>
                 <ul className="resultul">
                 {plaatsen
                   .filter((val) => {
@@ -248,7 +256,7 @@ export default function Afspraak() {
             </section>
 
             <section>
-              <h2>Datum en tijdstip</h2> 
+              <h2 id="afspraakdatum">Datum en tijdstip</h2> 
 
               <section>
                   <div>
@@ -279,7 +287,7 @@ export default function Afspraak() {
 
 
 
-                    <p>Beschikbare tijden vanaf 17:00 tot en met 02:00</p>
+                    <p id="afspraaktijden">Beschikbare tijden vanaf 17:00 tot en met 02:00</p>
                   </div>
                 </section>
 
@@ -288,35 +296,35 @@ export default function Afspraak() {
 
         <div>
 
-          <p>De prijzen hierondeer zijn schattingen van de rit. De prijs kan met enkele euro's oplopen of aflopen. Dat hangt af van de ophaalstraat en afleverstraat.</p>  
-          <p>Om uw afspraak te bevestigen kiest u uw gewenste soort auto en zal doorverwezen worden naar WhatsApp. Na dat uw bericht succesvol verstuurd is, krijgt u een Tikkie als aanbetaling van de helft van de prijs wat hier onder per auto is opgenoemd. Dan is uw afspraak met succes geregistreerd en stuurt u uw ophaal- en aflever adres door.</p>
+          <p id="afspraaktext2">De prijzen hieronder zijn schattingen van de rit. De prijs kan met enkele euro's oplopen of aflopen. Dat hangt af van de ophaalstraat en afleverstraat.</p>  
+          <p id="afspraaktext3">Om uw afspraak te bevestigen kiest u uw gewenste soort auto en zal doorverwezen worden naar WhatsApp. Na dat uw bericht succesvol verstuurd is, krijgt u een Tikkie als aanbetaling van de helft van de prijs wat hier onder per auto is opgenoemd. Dan is uw afspraak met succes geregistreerd en stuurt u uw ophaal- en aflever adres door.</p>
           
           <div>
             <section>
               <Image src={autopng} alt="Normaal Auto" />
-              <h2>Normale Auto</h2>
+              <h2 id="afspraakauto1">Normale Auto</h2>
               <p>(E-Klasse)</p>
-              <p>Prijs:</p>
+              <p id="prijs1">Prijs:</p>
               <p>&euro; <span className="normaleprijs">0.00</span></p>
-              <button className="displaynone normaleafspraak" onClick={normaleafspraak}>Afspraak</button>
+              <button className="displaynone normaleafspraak" id="afspraak1" onClick={normaleafspraak}>Afspraak</button>
             </section>
 
             <section>
               <Image src={vitopng} alt="Vito Auto" />
-              <h2>Bus / Van</h2>
+              <h2 id="afspraakauto2">Bus / Van</h2>
               <p>(Vito)</p>
-              <p>Prijs:</p>
+              <p id="prijs2">Prijs:</p>
               <p>&euro; <span className="busprijs">0.00</span></p>
-              <button className="displaynone busafspraak" onClick={busafspraak}>Afspraak</button>
+              <button className="displaynone busafspraak" id="afspraak2" onClick={busafspraak}>Afspraak</button>
             </section>
 
             <section>
               <Image src={sklassepng} alt="Limo Auto" />
-              <h2>Luxe Auto</h2>
+              <h2 id="afspraakauto3">Luxe Auto</h2>
               <p>(S-Klasse / 7-Serie)</p>
-              <p>Prijs:</p>
+              <p id="prijs3">Prijs:</p>
               <p>&euro; <span className="luxeprijs">0.00</span></p>
-              <button className="displaynone luxeafspraak" onClick={luxeafspraak}>Afspraak</button>
+              <button className="displaynone luxeafspraak" id="afspraak3" onClick={luxeafspraak}>Afspraak</button>
             </section>
           </div>
           <Image src={betaalmethodes} alt="Betaalmethodes"/>
